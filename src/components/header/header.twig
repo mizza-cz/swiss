@@ -1,25 +1,110 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
-      <div class="d-flex justify-content-end align-items-center gap-6 ms-auto header__lang">
-        <div class="d-lg-flex align-items-center gap-4 d-none">
-          <details class="lang-dropdown" title="Výběr jazyka">
-            <summary>fr</summary>
-            <ul role="list" class="text-base-semibold">
-              <li aria-selected="true">
-                <a href="#"> Fr </a>
-              </li>
-              <li>
-                <a href="#"> En </a>
-              </li>
+      <div class="header__main">
+        <a class="header__logo" href="/">
+          <img src="images/ico/header-logo.svg" loading="lazy" alt="logo" />
+        </a>
 
-              <li>
-                <a href="#"> it </a>
+        <nav class="navbar navbar-expand-xl">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav gap-xxl-8 gap-6">
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#programCards"
+                  >Erstkontakt</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#competitiveAthletes"
+                  >LEISTUNGSSPORTLER
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#competitiveAthlete"
+                  >LEISTUNGSSPORTLERIN</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#coach">COACH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#referee"
+                  >SCHIEDSRICHTER/IN</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link anchor-item" href="#clubOfficial"
+                  >CLUBFUNKTIONÄR/IN
+                </a>
               </li>
             </ul>
-          </details>
-        </div>
+
+            <ul class="header__social d-xl-none d-flex">
+              <li>
+                <a href="#" target="_blank"
+                  >{% include "@images/insta.svg" %}</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  >{% include "@images/tiktok.svg" %}</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank">{% include "@images/fb.svg" %}</a>
+              </li>
+              <li>
+                <a href="#" target="_blank">{% include "@images/x.svg" %}</a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  >{% include "@images/youtube.svg" %}</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  >{% include "@images/linkedin.svg" %}</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="header__social d-xl-flex d-none">
+          <li>
+            <a href="#" target="_blank">{% include "@images/insta.svg" %}</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">{% include "@images/tiktok.svg" %}</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">{% include "@images/fb.svg" %}</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">{% include "@images/x.svg" %}</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">{% include "@images/youtube.svg" %}</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">{% include "@images/linkedin.svg" %}</a>
+          </li>
+        </ul>
+
+        <button class="c-header__opener js-header__opener" type="button">
+          <span></span>
+        </button>
       </div>
+
+      <details class="lang-dropdown" title="Výběr jazyka">
+        <summary>fr</summary>
+        <ul role="list" class="text-base-semibold">
+          <li aria-selected="true"><a href="#">Fr</a></li>
+          <li><a href="#">En</a></li>
+          <li><a href="#">It</a></li>
+          <li><a href="#">DE</a></li>
+        </ul>
+      </details>
     </div>
   </div>
 </header>

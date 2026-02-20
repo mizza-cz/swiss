@@ -68,3 +68,10 @@ textarea,
 select {
   font: inherit;
 }
+:root {
+  --header-offset: 100px;
+}
+
+[id] {
+  scroll-margin-top: var(--header-offset);
+}
