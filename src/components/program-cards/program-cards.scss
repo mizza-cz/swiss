@@ -1,0 +1,27 @@
+[class^="programCard-"] {
+  padding: 32px;
+  min-height: 186px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  text-decoration-color: transparent;
+  height: 100%;
+  border-radius: 20px 0 20px 0;
+  .h4 {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+  }
+  &:hover .h4 {
+    text-decoration-color: inherit;
+  }
+}
+.programCard-primary {
+  background: var(--color-red);
+}
+
+.programCard-secondary {
+  background: var(--color-gray-5);
+}

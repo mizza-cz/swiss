@@ -1,0 +1,11 @@
+.header {
+  &__inner {
+    position: relative;
+  }
+  &__lang {
+    position: fixed;
+    top: 24px;
+    right: 0;
+    z-index: 999;
+  }
+}

@@ -1,0 +1,23 @@
+.button-primary {
+  border-radius: 8px 0 8px 0;
+  background: var(--color-red);
+  font-family: var(--font-secondary);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 10px 18px;
+  text-decoration-color: transparent;
+  transition: all 0.3s;
+  &:hover {
+    text-decoration-color: inherit;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

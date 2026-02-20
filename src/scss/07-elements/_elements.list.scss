@@ -1,0 +1,34 @@
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li {
+  margin: 0;
+}
+
+.list-unordered {
+  margin: 32px 0;
+  > li {
+    position: relative;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      background-color: var(--color-dark);
+      position: absolute;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+    }
+  }
+}

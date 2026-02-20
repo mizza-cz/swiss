@@ -1,0 +1,51 @@
+/*! purgecss start ignore */
+.container {
+  margin: 0 auto;
+  max-width: 98.2rem !important;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.font-primary {
+  font-family: var(--font-primary) !important;
+}
+.font-secondary {
+  font-family: var(--font-secondary) !important;
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+.text-red {
+  color: var(--color-red);
+}
+.text-black {
+  color: var(--color-dark) !important;
+}
+.text-gray-2 {
+  color: var(--color-gray-2);
+}
+.bg-gray-6 {
+  background: var(--color-gray-6);
+}
+.hover-outline,
+.hover-outline a {
+  text-decoration-color: transparent;
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}
+
+.rounded-16 {
+  border-radius: 16px;
+}
+.fs-italic {
+  font-style: italic;
+}
+.aspect-square {
+  aspect-ratio: 1/1;
+}
+.rounded-24_0 {
+  border-radius: 24px 0 24px 0;
+}
+/*! purgecss end ignore */

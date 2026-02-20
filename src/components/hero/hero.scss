@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  padding-top: 68px;
+  padding-bottom: 64px;
+  margin-bottom: 164px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("../images/content/header-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: clamp(40px, 5.55vw, 80px);
+    line-height: 100%;
+    text-align: center;
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto 68px;
+    width: 82px;
+    height: 126px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.hero-pillars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.hero-pillar {
+  &__link {
+    text-decoration: none;
+    display: block;
+    &:hover {
+      .hero-pillar__img::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .h3 {
+        text-decoration-color: var(--color-dark);
+      }
+    }
+    .h3 {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: all 0.3s;
+    }
+  }
+  &__img {
+    width: 352px;
+    height: 252px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: url("../images/ico/pillar-hover.svg") center / 158px 116px
+          no-repeat,
+        rgba(230, 0, 1, 0.8);
+      opacity: 0;
+      transform: scale(0.98);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+      -webkit-mask-image: url("../images/ico/mask.svg");
+      mask-image: url("../images/ico/mask.svg");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+  }
+  &__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .tag {
+    margin-top: -32px;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.hero-pillar + .hero-pillar {
+  margin-left: -64px;
+}
+.hero-pillar:nth-child(1) {
+  z-index: 1;
+}
+.hero-pillar:nth-child(2) {
+  z-index: 2;
+}
+.hero-pillar:nth-child(3) {
+  z-index: 3;
+}
+.hero-pillar:nth-child(4) {
+  z-index: 4;
+}
+.hero-pillar:nth-child(5) {
+  z-index: 5;
+}
+
+.hero-content {
+  display: flex;
+  margin: 0 -32px;
+  &__col {
+    padding: 0 32px;
+    max-width: 50%;
+    flex: 0 50%;
+  }
+  &__col + &__col {
+    border-left: 1px solid var(--color-gray-5);
+  }
+}
