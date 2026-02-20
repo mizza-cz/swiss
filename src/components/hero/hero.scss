@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   padding-top: 68px;
-  padding-bottom: 64px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
   @include media-breakpoint-up(xxl) {
     margin-bottom: 164px;
   }
@@ -11,6 +11,10 @@
   }
   @include media-breakpoint-up(lg) {
     margin-bottom: 96px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 64px;
+    padding-bottom: 64px;
   }
 
   &::before {
