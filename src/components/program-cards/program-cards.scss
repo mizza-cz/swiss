@@ -10,6 +10,12 @@
   text-decoration-color: transparent;
   height: 100%;
   border-radius: 20px 0 20px 0;
+  @include media-breakpoint-down(md) {
+    padding: 16px 32px;
+    flex-direction: row;
+    min-height: auto;
+    text-align: left;
+  }
   .h4 {
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -17,6 +23,20 @@
   }
   &:hover .h4 {
     text-decoration-color: inherit;
+  }
+}
+.programCard__arrow {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+.programCard__puck {
+  width: 44px;
+  height: 32px;
+  object-fit: contain;
+  @include media-breakpoint-down(md) {
+    width: 36px;
+    height: 24px;
   }
 }
 .programCard-primary {
