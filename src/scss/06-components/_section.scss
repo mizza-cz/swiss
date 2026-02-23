@@ -43,6 +43,7 @@
   width: 100%;
   aspect-ratio: 360/258;
   position: relative;
+  display: block;
   @include media-breakpoint-down(lg) {
     margin-left: auto;
     margin-right: auto;
@@ -52,6 +53,32 @@
     height: 100%;
     object-fit: cover;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: url("../images/ico/pillar-hover.svg") center / 158px 116px
+        no-repeat,
+      rgba(230, 0, 1, 0.8);
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+    -webkit-mask-image: url("../images/ico/mask.svg");
+    mask-image: url("../images/ico/mask.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    @include media-breakpoint-down(lg) {
+      background: url("../images/ico/pillar-hover.svg") center / 100px 80px
+          no-repeat,
+        rgba(230, 0, 1, 0.8);
+    }
+  }
   .tag {
     position: absolute;
     left: 0;
@@ -59,9 +86,34 @@
     z-index: 4;
   }
 }
+a.section-img:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
 .section-map {
+  a {
+    display: block;
+  }
   svg {
     width: 100%;
     height: auto;
+  }
+
+  a:hover .card-title {
+    text-decoration: underline;
+  }
+  a:hover {
+    .h4 {
+      // text-decoration-color: inherit;
+    }
+  }
+}
+
+#coach,
+#referee {
+  .section-map {
+    @include media-breakpoint-up(lg) {
+      margin-right: -1rem;
+    }
   }
 }
