@@ -102,11 +102,6 @@ a.section-img:hover::after {
   a:hover .card-title {
     text-decoration: underline;
   }
-  a:hover {
-    .h4 {
-      // text-decoration-color: inherit;
-    }
-  }
 }
 
 #coach,
@@ -116,4 +111,10 @@ a.section-img:hover::after {
       margin-right: -1rem;
     }
   }
+}
+.card-title {
+  // text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: all 0.3s;
+  max-width: 100px;
 }
