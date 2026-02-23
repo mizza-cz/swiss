@@ -1,8 +1,4 @@
 .article {
-  padding-bottom: 96px;
-  @include media-breakpoint-down(lg) {
-    padding-bottom: 40px;
-  }
   &__content,
   &__header {
     max-width: 51.5rem;
@@ -17,6 +13,12 @@
     text-align: center;
     @include media-breakpoint-down(lg) {
       margin-bottom: 40px;
+    }
+  }
+  &__content {
+    padding-bottom: 96px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 40px;
     }
   }
   &__img {
