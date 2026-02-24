@@ -17,12 +17,7 @@
     text-align: left;
   }
   .h4 {
-    text-decoration: underline;
-    text-decoration-color: transparent;
     font-weight: 400 !important;
-  }
-  &:hover .h4 {
-    text-decoration-color: inherit;
   }
 }
 .programCard__arrow {
@@ -46,5 +41,3 @@
 .programCard-secondary {
   background: var(--color-gray-5);
 }
-
- 

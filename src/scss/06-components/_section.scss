@@ -98,10 +98,6 @@ a.section-img:hover::after {
     width: 100%;
     height: auto;
   }
-
-  a:hover .card-title {
-    // text-decoration: underline;
-  }
 }
 
 #coach,
@@ -112,9 +108,3 @@ a.section-img:hover::after {
     }
   }
 }
-// .card-title {
-//   // text-decoration: underline;
-//   text-decoration-color: transparent;
-//   transition: all 0.3s;
-//   max-width: 100px;
-// }
