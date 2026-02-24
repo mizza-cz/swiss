@@ -100,7 +100,7 @@ a.section-img:hover::after {
   }
 
   a:hover .card-title {
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 }
 
@@ -112,9 +112,9 @@ a.section-img:hover::after {
     }
   }
 }
-.card-title {
-  // text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: all 0.3s;
-  max-width: 100px;
-}
+// .card-title {
+//   // text-decoration: underline;
+//   text-decoration-color: transparent;
+//   transition: all 0.3s;
+//   max-width: 100px;
+// }
