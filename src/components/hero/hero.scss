@@ -60,6 +60,12 @@
   margin: 0 -32px;
   flex-wrap: wrap;
   gap: 32px 0;
+  @include media-breakpoint-down(md) {
+    p,
+    ul {
+      font-size: 16px !important;
+    }
+  }
   &__col {
     padding: 0 32px;
 
@@ -122,6 +128,9 @@
     aspect-ratio: 325/252;
     position: relative;
     margin: 0 auto;
+    @include media-breakpoint-down(sm) {
+      width: 80%;
+    }
     &::after {
       content: "";
       position: absolute;
