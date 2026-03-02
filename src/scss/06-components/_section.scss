@@ -96,6 +96,7 @@ a.section-img:hover::after {
 .section-map {
   a {
     display: block;
+    text-decoration: none !important;
   }
   svg {
     width: 100%;
@@ -111,4 +112,3 @@ a.section-img:hover::after {
     }
   }
 }
- 
