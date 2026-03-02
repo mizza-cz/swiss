@@ -156,6 +156,9 @@
             no-repeat,
           rgba(230, 0, 1, 0.8);
       }
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
   &__img img {

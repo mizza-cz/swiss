@@ -22,12 +22,30 @@
     });
   }
 
+  function updateHeaderOffset() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+
+    const h = Math.ceil(header.getBoundingClientRect().height) + 8; // запас
+    document.documentElement.style.setProperty("--header-offset", h + "px");
+  }
+
   function bindStickyHeader() {
     const $header = $(".header");
     const $body = $("body");
 
+    const MOBILE_BP = 1199; // подстрой под свой брейкпоинт, если надо
+    const MOBILE_THRESHOLD = 180; // твои 160–180, потом настроишь
+
+    function isMobile() {
+      return window.matchMedia(`(max-width: ${MOBILE_BP}px)`).matches;
+    }
+
     function apply() {
-      const scrolled = $(window).scrollTop() > 0;
+      const y = $(window).scrollTop() || 0;
+      const threshold = isMobile() ? MOBILE_THRESHOLD : 0;
+      const scrolled = y > threshold;
+
       $header.toggleClass("is-scrolled", scrolled);
 
       if (scrolled) {
@@ -35,6 +53,8 @@
       } else {
         $body.css("padding-top", "");
       }
+
+      updateHeaderOffset();
     }
 
     $(window).on("scroll", apply);
@@ -47,14 +67,3 @@
     bindStickyHeader();
   });
 })(jQuery);
-function updateHeaderOffset() {
-  const header = document.querySelector(".header");
-  if (!header) return;
-
-  const h = Math.ceil(header.getBoundingClientRect().height) + 8; // +8px запас
-  document.documentElement.style.setProperty("--header-offset", h + "px");
-}
-
-window.addEventListener("load", updateHeaderOffset);
-window.addEventListener("resize", updateHeaderOffset);
-window.addEventListener("scroll", updateHeaderOffset);
