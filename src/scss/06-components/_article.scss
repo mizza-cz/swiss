@@ -1,4 +1,14 @@
 .article {
+  .o-content {
+    p + p {
+      margin-top: 24px;
+    }
+    p {
+      font-size: 20px;
+      font-family: var(--font-secondary) !important;
+      font-weight: 300;
+    }
+  }
   &__content,
   &__header {
     max-width: 51.5rem;
@@ -9,10 +19,10 @@
     }
   }
   &__header {
-    margin-bottom: 64px;
+    margin-bottom: 40px;
     text-align: center;
     @include media-breakpoint-down(lg) {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
   }
   &__content {

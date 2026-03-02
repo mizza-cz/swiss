@@ -5,11 +5,11 @@
     height: 100%;
   }
   .modal-dialog {
-    max-width: 64rem !important;
+    max-width: 56rem !important;
     background-color: var(--color-white) !important;
     width: 100%;
     position: relative;
-    padding-top: 90px;
+    padding-top: 72px;
     border-radius: 32px 0 32px 0;
     overflow: hidden;
     @include media-breakpoint-down(md) {
@@ -33,7 +33,7 @@
     display: block;
     border: none;
     padding: 0;
-    top: -50px;
+    top: -2.5rem;
     @include media-breakpoint-down(md) {
       top: 0px;
       position: relative;
