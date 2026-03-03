@@ -19,11 +19,15 @@
   .h4 {
     font-weight: 400 !important;
   }
+  &:hover .programCard__arrow {
+    opacity: 1;
+  }
 }
 .programCard__arrow {
   width: 21px;
   height: 21px;
-  object-fit: contain;
+  opacity: 0;
+  transition: opacity 150ms ease;
 }
 .programCard__puck {
   width: 44px;
@@ -36,8 +40,14 @@
 }
 .programCard-primary {
   background: var(--color-red);
+  svg path {
+    stroke: var(--color-red-2);
+  }
 }
 
 .programCard-secondary {
   background: var(--color-gray-5);
+  svg path {
+    stroke: var(--color-gray-3);
+  }
 }
