@@ -44,6 +44,7 @@
   aspect-ratio: 360/258;
   position: relative;
   display: block;
+  outline: none;
   @include media-breakpoint-down(lg) {
     max-width: 240px;
     margin: 0 auto;
@@ -106,7 +107,7 @@ a.section-img:hover::after {
     height: auto;
   }
   .link-icon {
-    opacity: 0;
+    // opacity: 0;
     transform-origin: 0 0;
     transition: opacity 150ms ease;
   }

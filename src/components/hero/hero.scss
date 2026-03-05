@@ -106,6 +106,7 @@
     flex: 0 50%;
   }
   &__link {
+    outline: none;
     text-decoration: none;
     display: block;
     &:hover {
