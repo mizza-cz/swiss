@@ -7,10 +7,15 @@ const modal = document.getElementById("articleModal");
 
 if (modal) {
   modal.addEventListener("hidden.bs.modal", function () {
-    const iframes = modal.querySelectorAll("iframe");
+    modal.querySelectorAll("video").forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+    });
 
-    iframes.forEach((iframe) => {
-      iframe.src = iframe.src;
+    modal.querySelectorAll("iframe").forEach((iframe) => {
+      const src = iframe.getAttribute("src");
+      iframe.setAttribute("src", "");
+      iframe.setAttribute("src", src);
     });
   });
 }
