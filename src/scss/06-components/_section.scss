@@ -110,6 +110,9 @@ a.section-img:hover::after {
     opacity: 0;
     transform-origin: 0 0;
     transition: opacity 150ms ease;
+    @include media-breakpoint-down(lg) {
+      opacity: 1;
+    }
   }
 }
 

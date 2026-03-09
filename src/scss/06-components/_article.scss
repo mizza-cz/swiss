@@ -26,10 +26,7 @@
     }
   }
   &__content {
-    padding-bottom: 96px;
-    @include media-breakpoint-down(lg) {
-      padding-bottom: 40px;
-    }
+    padding-bottom: 32px;
   }
   &__img {
     margin-bottom: 64px;

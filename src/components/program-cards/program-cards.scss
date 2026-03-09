@@ -28,6 +28,9 @@
   height: 21px;
   opacity: 0;
   transition: opacity 150ms ease;
+  @include media-breakpoint-down(lg) {
+    opacity: 1;
+  }
 }
 .programCard__puck {
   width: 44px;
